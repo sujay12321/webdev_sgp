@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic calc</title>
+</head>
+
+<style>
+    /* just basic color changes */
+
+    *{text-align: center;}
+    body{background-color:#5CDB95;}
+
+    h2{color: #05386B;}
+    
+    .nos,.op
+    {color: #5D5C61;}
+    
+
+
+</style>
+
+<body>
+    
+     <!-- creating some space to display what the user had entered -->
+    <br>
+    <h2>The First no entered was <span class="nos" id="no1"></span>     </h2> 
+    <br>
+    <h2>The Second no entered was <span class="nos" id="no2"></span></h2>
+    <br>
+    <h2>The Operation to be executed is  <span class="op" id="op"></span></h2>  
+    <br>
+    <h1 style="color: #EDF5E1;">RESULT:</h1>
+    <br>
+    <h1 style="color: #EDF5E1; "   id="result"></h1>
+
+
+</body>
+
+
+<script>
+
+    // just accepting the values and storing them 
+var num_1=prompt("enter the first no");
+var num_2=prompt("enter the second no");
+var op=prompt("enter the operation to be executed between them");
+
+    // displaying what the user had entered
+document.getElementById("no1").innerHTML=num_1;
+document.getElementById("no2").innerHTML=num_2;
+document.getElementById("op").innerHTML=op;
+
+    
+var result="Please choose a operation to be executed";
+
+    // using elseif statements to check which operator is entered by the user 
+if(op == '+')
+    {
+        result = Number(num_1) + Number(num_2);
+    }
+else if(op == '-')
+    {
+        result = num_1 - num_2;
+    }
+else if(op == '/')
+    {
+        result = num_1 / num_2;
+    }
+else if(op == '%')
+    {
+        result = num_1 % num_2;
+    }
+else if(op == '*')
+    {
+        result = num_1 * num_2;
+    }
+else alert("please note that only + , - , / , % , * are supported in this calc");
+
+
+    // displaying the result 
+document.getElementById("result").innerHTML=result;
+
+</script>
+</html>
