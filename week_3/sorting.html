@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sorting a array</title>
+</head>
+<body>
+    
+    <button onclick="afunc();">alphabetical order</button>
+    <button onclick="ifunc();">increasing order</button>
+    <button onclick="dfunc();">decreasing order</button>
+    <!-- just creating buttons here -->
+    <br>
+    <span id="iar"></span>
+    <br>
+    <span id="far"></span>
+    <!-- created some space to later print the arrays -->
+
+</body>
+
+<script>
+
+    var arr= [4,3,5,1,10,2,22,12];
+
+    document.getElementById("iar").innerHTML = arr;
+
+    
+    function afunc()
+    {
+        arr.sort();
+        document.getElementById("far").innerHTML = arr;
+        // using inbuilt function sort() for alphabetical order 
+    }
+
+    function cfunc(x,y)
+    {
+        return x-y;
+        // a compare function created to be passed to sort function 
+    }
+
+
+    function ifunc()
+    {
+        arr.sort(cfunc);
+        document.getElementById("far").innerHTML = arr;
+        // passing a compare function inside the inbuilt sort function for the increasing order 
+        
+    }
+
+    function dfunc()
+    {
+        arr.sort(cfunc);
+        arr.reverse();
+        document.getElementById("far").innerHTML = arr;
+
+        //  first sets the array in increasing order then using inbuilt reverse function,thereby making it a decreasing array 
+        
+    }
+
+    
+
+</script>
+
+</html>
