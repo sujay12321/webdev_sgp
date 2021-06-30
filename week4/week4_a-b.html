@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    header{
+        text-align: center;
+        font-size: 2.7rem;
+        font-weight: bolder;
+        color: lemonchiffon;
+    }
+
+    nav{
+        background-color: steelblue;
+        padding:3px ;
+        
+    }
+
+    .navv{
+        color: lightcyan;
+        text-decoration: none; 
+        padding: 33px;
+        font-size: 1.2rem;
+    }
+    a:hover{
+        color: navy;
+    }
+    footer{
+        text-align: center; 
+        bottom: 0;
+        font-size: 1.5rem;
+        position: fixed;
+        width: 100%;
+        background-color: teal;
+        color: lightsteelblue;
+        padding: 0.5rem;
+    }
+
+    #submit{
+
+        background-color: mediumturquoise;
+        padding: 0.5rem;
+        width: 100px;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+    /* Mandatory: The submit and reset buttons should be styled differently- different colors for 
+example.
+    they have different colors assigned
+*/
+
+
+
+    #reset{
+
+        background-color: olivedrab;
+        padding: 0.5rem;
+        width: 100px;
+        font-weight: bold;
+        font-size: 1rem;
+
+
+    }
+
+
+    #reset:hover{
+        background-color: red;
+      /* Brownie points: Look up hover pseudoclass and make the color of one of the buttons 
+change on hover.*/
+    }
+    
+</style>
+<body style="background-color: darkseagreen;">
+    
+    <header>Just fill the form </header>
+
+    <nav>
+        
+        <a class="navv" href="someLinkCanBeEmbededHere">Home</a>
+        <a class="navv" href="someLinkCanBeEmbededHere">Help</a>
+        <a class="navv" href="someLinkCanBeEmbededHere">Contact us</a>
+        
+        
+<!--  1.Navbar with some content. The content of the navbar can be anything: the 
+title/logo/links etc. -->
+
+
+    </nav>
+
+    <form>
+        <fieldset>
+            <br>
+            <legend>
+                Signup-form
+            </legend>
+            
+            <label>
+                <input type="radio" name="choose" value="Mr">
+                Mr
+            </label>
+            
+            <label>
+                <input type="radio" name="choose" value="Mrs">
+                Mrs
+            </label>
+            
+            <label>
+                <input type="radio" name="choose" value="Miss">
+                Miss
+            </label>
+            <br>
+            <br>
+            <label>
+                First Name :
+                <input type="text" size="39" maxlength="50" name="firstName" placeholder="First Name">
+            </label>
+            <br>
+            <br>
+            <label>
+                Last Name :
+                <input type="text" size="39" maxlength="50" name="lastName" placeholder="Last Name">
+            </label>
+            <br>
+            <br>
+            <label>
+                Email id:
+                <input type="email" size="41" maxlength="50" name="email" placeholder="Email">
+            </label>
+            <br>
+            <br>
+            <label>
+                Phone No :
+                <input type="tel" size="40" maxlength="10" name="phoneNo" placeholder="Phone">
+            </label>
+            <br>
+            <br>
+            <label>
+                Password :
+                <input type="password" size="40" maxlength="40" name="password" placeholder="Enter Password">
+            </label>
+            <br>
+            <br>
+            <label>
+                Confirm your Password :
+                <input type="password" size="29" maxlength="40" name="confirmPassword" placeholder="Re-enter Password">
+            </label>
+            <br>
+            <br>
+            <label>
+                Country :    
+            </label>
+            <select name="country" >
+                <option value="" disabled selected hidden>Select your Country</option>
+                
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="India">India</option>
+                <option value="China">China</option>
+
+            </select>
+            <br>
+            <br>
+            <label>
+            
+                <input type="checkbox" name="agree">
+                I agree to the <a href="someLinkCanBeEmbededHere">terms and conditions</a>
+            </label>
+
+            <br>
+            <br>
+
+            <input id="submit" type="submit" value="Sign Up">
+            <input id="reset" type="reset" value="Reset">
+
+        </fieldset>
+    </form>
+
+    <footer>
+        created by sujay
+
+        <!-- Additional: Add a footer to the website with any content of your choice.  -->
+
+    </footer>
+    
+</body>
+</html>
