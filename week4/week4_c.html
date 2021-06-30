@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+</head>
+<body>
+    <span id="thespace"></span>
+    <br>
+    check the console for the rgb and hex
+
+</body>
+
+<script>
+
+
+function conv(r,g,b) {
+        
+        return "#" + ((1<<24) + (r<<16) + (g<<8) + b).toString(16).slice(1)
+        }
+
+class Color{
+
+    constructor(r,g,b){
+        this.r=r;
+        this.g=g;
+        this.b=b;
+        
+        // (i) Create a class Color which has properties r,g and b. 
+
+    } 
+    rgb(){
+        
+        console.log(`rgb(${this.r},${this.g},${this.b})`) ;
+
+        // (iii) Create a method .rgb() which returns the properties of the color in the rgb format. 
+
+    }
+
+    hex(){
+
+        var temp = conv(this.r,this.g,this.b);
+        console.log(temp);
+
+        // (iv) Create a method .hex() which returns the properties of the color in hex format. 
+
+    }
+
+}
+
+var turquoise = new Color(64,224,208);
+var purple = new Color(101, 31, 255);
+
+// (ii) Create two colors using the class Color: turquoise with rgb(64,224,208) and purple with
+// rgb(101, 31, 255).
+
+
+
+var color=prompt("enter the color turquoise or purple");
+
+
+
+if((color=="turquoise") || (color== "purple")){
+    
+    document.getElementById("thespace").innerHTML=color;
+    if(color=="turquoise"){
+        turquoise.rgb();
+        turquoise.hex();
+    }
+    else{
+        purple.rgb();
+        purple.hex();
+    }
+}
+else{
+    
+
+    alert("enter the color properly");
+
+}
+</script>
+
+
+</html>
